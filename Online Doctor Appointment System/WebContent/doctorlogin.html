@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Doctor Page</title>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style>
+#content{
+top:125px;
+width:100%;
+position:absolute;
+height:515px;
+background-image:url('images/dl.jpg');
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover; 
+opacity:0.8; 
+}
+#ct{
+position:absolute;
+left:35%; 
+background: rgba(36, 71, 143,0.3);
+border:0px solid black;
+height:auto;
+width:350px; 
+}
+table
+{
+border:0px solid black;
+height:250px; 
+width:250px; 
+}
+ td
+{
+width:50%;
+height:40px;
+font-size:20px;
+} 
+caption
+{
+font-size:25px;
+}
+input{
+height:30px;
+width:100%;
+font-size:15px;
+}
+
+</style>
+<script> 
+$(document).ready(function(){
+/* $(function(){ */
+  $("#header").load("headerPage.html"); 
+});
+</script>
+
+</head>
+<body>
+
+<div id="header"></div>
+<div id="content"><br><br>
+<div id="ct">
+<form id="formDL" action="doctorlogin_validate.jsp" name="formDL" method="post">
+<table align="center">
+<caption><b>Login</b></caption>
+<tr>
+<td align="center">Doctor Id:</td>
+<td><input type="text" placeholder="Enter id" id="p_id" name="doc_id" required></td>
+</tr>
+<tr>
+<td align="center">Password :</td>
+<td><input type="password" placeholder="Enter Password" id="pwd" name="doc_pwd" required></td>
+</tr>
+<tr>
+<td><input type="submit" value="Login"></td>
+<td><input type="reset" value="Cancel"></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style>
+#content{
+top:125px;
+width:100%;
+position:absolute;
+height:510px;
+background-image:url('images/bg2.jpg');
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover; 
+/*background: rgba(76, 175, 80, 0.6);
+font-weight:bold;*/
+opacity:0.8; 
+}
+#ct{
+position:absolute;
+left:35%; 
+background: rgba(230, 255, 255,0.3);
+border:0px solid black;
+/* height:310px;  */
+width:350px; 
+height: auto;
+
+}
+#content table
+{
+border:0px solid black;
+height:250px; 
+width:250px; 
+}
+#content td
+{
+width:50%;
+height:40px;
+font-size:20px;
+}
+#content caption
+{
+font-size:25px;
+}
+#content input{
+height:30px;
+width:100%;
+font-size:15px;
+}
+</style>
+<script> 
+ $(document).ready(function(){ 
+  $("#header").load("headerPage.html"); 
+  $("#footer").load("footer.html"); 
+});
+</script>
+</head>
+<body>
+<div id="header"></div>
+<div id="content"><br><br>
+<div id="ct"><br>
+<form action="patientlogin_validate.jsp" method="post">
+<table align="center">
+<caption><b>Login</b></caption>
+<tr>
+<td align="center">Patient Id:</td>
+<td><input type="text" placeholder="Enter id" id="p_id" name="p_id" required></td>
+</tr>
+<tr>
+<td align="center">Password :</td>
+<td><input type="password" placeholder="Enter Password" id="pwd" name="p_pwd" required></td>
+</tr>
+<tr>
+<td><input type="submit" value="Login"></td>
+<td><input type="reset" value="Cancel"></td>
+</tr>
+<tr>
+<td colspan=2 align="center">New User? <a href="register.html">Register</a></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+
+</body>
+</html>

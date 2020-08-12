@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>registration</title>
+</head>
+<style>
+body{
+width:100%;
+height: auto;
+min-height: 100% !important;
+position:absolute;
+background-image:url('images/bgg5.jpg');
+background-position:center;
+background-repeat:repeat;
+background-size:cover; 
+}
+table
+{
+border:0px solid black;
+height:300px; 
+width:500px; 
+}
+td
+{
+width:50%;
+height:30px;
+font-size:20px;
+padding:8px;
+}
+caption
+{
+font-size:25px;
+}
+input,button{
+height:30px;
+width:70%;
+font-size:15px;
+}
+#rb{
+height:15px;
+width:10%;
+}
+</style>
+<body>
+<form action="registration_validate.jsp" method="post" name="myform" onsubmit="return myFun()" autocomplete="off">
+<table align="center">
+    <caption>REGISTRATION FORM</caption>
+    <tr><td colspan="2"><center>Please fill in this form to register.</center></td></tr>
+	<tr>
+    <tr><td><b>Name:</b></td>
+    <td><input type="text"placeholder="Enter Your Name" name="Name" required></td></tr>
+	<tr><td><b>Gender:</b></td>
+	<td><input type="radio" id="rb" name="myradio" value="Male">Male
+    	<input type="radio" name="myradio" id="rb" value="Female">Female</td></tr>
+    <tr><td><b>Phone Number:</b></td>
+    <td><input type="text" placeholder="Enter Your Phoneno" name="phone"  required>
+		<span id="phn" style="color:red"></span></td></tr>
+	<tr><td><b>Email:</b></td>
+	<td><input type="text" name="email" placeholder="Enter Your Email" required></td></tr>
+	<tr><td><b>Password:</b></td>
+	<td><input type="password" name="password" placeholder="Enter Your Password" >
+		<span id="messages" style="color:red" ></span></td></tr>
+	<tr><td><b>Confirm Password:</b></td>
+	<td><input type="password" placeholder="Confirm Password"  name="password2">
+		<span id="message" style="color:red" ></span></td></tr>
+	<tr><td><b>DOB:</b></td>
+	<td><input type="date" name="date" required ></td></tr>
+	<tr><td><input type="submit" value="Register" ></td>
+	<td><input type="reset" value="Cancel"></td></tr>
+<tr><td colspan="2" align="center"><p>Already registered? <a href="patientlogin.html">Login</a></p></td></tr>
+</table>
+</form>
+<script>
+function myFun(){
+	
+	var a=document.myform.password.value;
+	var b=document.myform.password2.value;
+	var p=document.myform.phone.value;
+	if(a!=b){
+		document.getElementById("message").innerHTML="**passwords do not match";
+	return false;
+	}
+	if(a.length<4 || a.length>10){
+		document.getElementById("messages").innerHTML="**password must be 6-10 characters";
+		return false;
+	}
+	if(p.length!=10){
+		document.getElementById("phn").innerHTML="**invalid";
+		return false;
+	}
+	if(isNaN(p)){
+		document.getElementById("phn").innerHTML="**enter only numbers";
+		return false;
+	}
+}
+</script>
+</body>
+</html>

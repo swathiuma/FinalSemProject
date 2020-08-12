@@ -1,0 +1,41 @@
+@CHARSET "ISO-8859-1";
+body{
+top:0px; 
+width:100%;
+height: auto;
+min-height: 100% !important;
+position:absolute;
+background-color:white;
+background-image:url('images/bgg6.jpg');
+background-position:center;
+background-repeat:repeat;
+background-size:cover; 
+/* background:rgba(194, 194, 163,0.3); */
+}
+input[type=checkbox] {
+    border: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+label,caption{
+font-size:20px;
+}
+
+table{
+height:250px;
+width:500px;
+}
+table,th,td{
+border:0px solid black;
+ }
+td{
+/* text-align:center; */
+padding:10px;
+width:200px;
+}
+#sbt,#rst{
+height:30px;
+width:50%;
+font-size:15px;
+}

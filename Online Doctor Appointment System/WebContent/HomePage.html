@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Online Doctor Appointment System</title>
+<style>
+.content {
+width:100%;
+height:370px;
+background-image:url('images/doctorpatient.jpg');
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+opacity:0.9; 
+top:130px;
+position:absolute;
+}
+
+.logins{
+top:510px;
+position:absolute;
+height:130px;
+width:100%;
+/* background:#b3cbcb;  */
+background-image:url('images/l3.jpg');
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+opacity:0.9;
+}
+#footer{
+top:645px;
+position:absolute;
+background-color:white;
+height:20px;
+font-size:10px;
+padding:0px;
+width:100%; 
+}
+h2{
+position: absolute;                  
+      top:10px;                          
+      left:30px;   
+}
+.ctn{
+height:370px;
+width:100%;
+background: rgba(230, 255, 255,0.2);
+border:0px solid black;
+}
+</style>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script> 
+$(function(){
+  $("#header").load("headerPage.html"); 
+  $("#footer").load("footer.html");  
+});
+</script>
+</head>
+<body bgcolor="#c2c2a3">
+<div id="header"></div>
+<div class="content">
+<div class="ctn">
+<h2>Suraksha Hospital will be giving you the best of modern health care to ensure you stay healthy, always.<br>
+We value your time and understand that you want the best of Suraksha - but at your convenience.<br>
+Our doctors are providing the best treatment from many years. <br><br>As per your convenience we are providing online doctor appointments 
+with many features (booking, viewing, <br>checking status, sending reports and get doctors prescription online)
+<br>Every Doctor will have patients record of their previous problems to provide best medication. 
+</h2>
+</div>
+</div>
+<div class="logins"><br>
+<table width=400px height=80px align="center">
+<tr>
+<td width=40%><a href="doctorlogin.html"><img src="images/doctor.jpg" alt="doctor_login" width=50% height=80px></a></td>
+<td width=20%></td>
+<td width=40%><a href="patientlogin.html"><img src="images/patient.jpg" alt="patient_login" width=50% height=80px></a></td>
+</tr>
+<tr>
+<td>doctor login</td>
+<td></td>
+<td>patient login</td>
+</tr>
+</table>
+</div>
+<div id="footer"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
